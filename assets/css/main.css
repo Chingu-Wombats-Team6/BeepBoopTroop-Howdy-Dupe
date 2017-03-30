@@ -1,0 +1,62 @@
+.content {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overview>img {
+  float: left;
+  margin: 0 2rem 0 0;
+  max-height: 16rem;
+  /*clear: both;*/
+}
+
+.overview>p:first-of-type {
+  padding-top: 2rem;
+}
+
+.overview, .info {
+  max-width: 70rem;
+}
+
+.info>p:first-of-type {
+  padding-top: 0.75rem;
+}
+
+.button-container {
+  float: right;
+}
+
+.botkit-studio {
+  padding-top: 6rem;
+}
+
+.info>p {
+  float: left;
+  margin: 0;
+  max-width: 50rem;
+}
+
+@media only screen and (max-width: 1020px) {
+  .overview>img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .headers h1 {
+    text-align: center;
+  }
+  .button-container {
+    float: none;
+  }
+  .button-container button {
+    display: block;
+    margin: 0 auto;
+  }
+  .botkit-studio {
+    padding-top: 0;
+  }
+}
