@@ -15,6 +15,7 @@
   background-attachment: fixed;
   color: rgb(60,60,60);
 }
+
 .index p {
   /* style | variant | weight | size/line-height | family */
   font: normal 400 20px/32px "freight-sans-pro";
@@ -22,12 +23,20 @@
 
 .description {
   background-color: rgba(157,244,233, 0.7);
-  min-height: 33rem;
+  min-height: 26.5rem;
 }
 
 .botkit-studio {
   background-color: rgb(176,134,250);
   min-height: 16rem;
+}
+
+.botkit-studio .emphasis {
+  font-weight: bold;
+  color: rgb(227,211,254);
+  background-color: rgb(60,60,60);
+  padding: 0 0.75rem;
+  border-radius: 1rem;
 }
 
 .headers {
@@ -58,7 +67,6 @@
   float: left;
   margin: 1rem 3rem 0 0;
   max-height: 16rem;
-  /*clear: both;*/
 }
 
 .overview>p:first-of-type {
@@ -69,15 +77,63 @@
   padding-top: 0.75rem;
 }
 
-.button-container {
-  float: right;
-}
 
 .info>p {
   float: left;
   margin: 0;
   max-width: 50rem;
 }
+
+/*button styling*/
+
+.button-container {
+  float: right;
+}
+
+.button-container p {
+  letter-spacing: 0.1rem;
+}
+
+.buttons {
+  border-radius: 1rem 1rem 1rem 0;
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  border-width: 0.25rem;
+}
+
+.login p, .slack p {
+  font-size: 26px;
+}
+
+.signup p {
+  font-size: 22px;
+  line-height: 36px;
+}
+
+.login {
+  border-color: rgb(26,34,230);
+}
+
+.slack {
+  border-color: rgb(236,0,115);
+}
+
+.signup {
+  border-color: rgb(103,21,240);
+}
+
+.login p {
+  color: rgb(17,23,124);
+}
+
+.buttons::before {
+  top: 14px;
+  left: 14px;
+  border-color: transparent;
+  background-color: rgb(138,153,252);
+}
+
+/*responsiveness*/
 
 @media only screen and (max-width: 1020px) {
   .overview>img {
