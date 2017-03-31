@@ -193,6 +193,10 @@
   transform: translate(20.75rem, 1rem);
 }
 
+.botkit-studio:hover .info::after {
+  transform: translate(20rem, 0rem);
+}
+
 /*responsiveness*/
 
 @media only screen and (max-width: 1600px) {
