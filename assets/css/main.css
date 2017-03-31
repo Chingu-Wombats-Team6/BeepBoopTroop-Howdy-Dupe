@@ -22,37 +22,47 @@
 
 .description {
   background-color: rgba(157,244,233, 0.7);
-  min-height: 20rem;
+  min-height: 33rem;
 }
 
 .botkit-studio {
   background-color: rgb(176,134,250);
-  min-height: 10rem;
+  min-height: 16rem;
 }
 
 .headers {
   font-family: 'GTHaptikLight', sans-serif;
 }
 
+.headers h1 {
+  font-size: 51px;
+  line-height: 82px;
+}
+
+.headers h3 {
+  font-size: 30px;
+  line-height: 45px;
+}
+
 .content {
-  max-width: 60rem;
+  width: 100%;
+}
+
+.container {
+  max-width: 80rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 .overview>img {
   float: left;
-  margin: 0 2rem 0 0;
+  margin: 1rem 3rem 0 0;
   max-height: 16rem;
   /*clear: both;*/
 }
 
 .overview>p:first-of-type {
-  padding-top: 2rem;
-}
-
-.overview, .info {
-  max-width: 70rem;
+  padding-top: 1rem;
 }
 
 .info>p:first-of-type {
