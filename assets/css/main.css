@@ -1,3 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'GTHaptikLight';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../font/GT-Haptik-Trial-Light.otf') format('woff2')
+}
+
+.index {
+  background-image: url(../img/Multicolor-light.png);
+  background-attachment: fixed;
+  color: rgb(60,60,60);
+}
+.index p {
+  /* style | variant | weight | size/line-height | family */
+  font: normal 400 20px/32px "freight-sans-pro";
+}
+
+.description {
+  background-color: rgba(157,244,233, 0.7);
+  min-height: 20rem;
+}
+
+.botkit-studio {
+  background-color: rgb(176,134,250);
+  min-height: 10rem;
+}
+
+.headers {
+  font-family: 'GTHaptikLight', sans-serif;
+}
+
 .content {
   max-width: 60rem;
   margin-left: auto;
@@ -25,10 +61,6 @@
 
 .button-container {
   float: right;
-}
-
-.botkit-studio {
-  padding-top: 6rem;
 }
 
 .info>p {
