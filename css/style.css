@@ -40,17 +40,61 @@ table { border-collapse: collapse; border-spacing: 0; }
 }
 
 /* ====== Keyframes for Shoutout animation ====== */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
 
 @-webkit-keyframes shoutout {
     0% { opacity: 0; }
     100% { opacity: 1 }
 }
 
+@keyframes ellipsis {
+  to {
+    width: .8em; } }
+@-webkit-keyframes ellipsis {
+  to {
+    width: .8em; } }
+
+
 h2,h4 {
     color: #444;
 }
 /* Top Section of page */
-.howdy-main {
+.shoutout {
+    display: none;
+}
+
+.howdy-main
     background-image: url(../images/Multicolor-light.png);
     background-color: #fff;
     background-attachment: fixed;
@@ -68,27 +112,39 @@ h2,h4 {
     text-align: center;
     font-family: "Hind", "freight-sans-pro", sans-serif;
     font-weight: 600;
-    font-size: 170px;
+    font-size: /*170px*/10rem;
     margin: 15px 0 20px 0;
 }
 
 /* Entire div with speach bubbles, avatars, text */
 .howdy-main .shoutout .tweet {
     text-align: left;
-    min-width: 75px;
+    /*min-width: 75px;*/
 }
 
-.howdy-main .shoutout .tweet::after {
+.howdy-main .shoutout .dots::after {
     overflow: hidden;
-    font-size: 2.4em;
+    font-size: 4rem;
     display: inline-block;
     vertical-align: bottom;
+    /*margin-left: 120px;*/
     -webkit-animation: ellipsis steps(4, end) 900ms infinite;
     animation: ellipsis steps(4, end) 900ms infinite;
     content: "\2026";
     /* ascii code for the ellipsis character */
     width: 0;
 }
+
+/* hide ellipsis after 
+@keyframes ellipsis {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+*/
+
 .howdy-main .shoutout .highlights {
       -webkit-animation: fadeIn 0.2s 0s forwards;
       animation: fadeIn 0.2s 0s forwards;
@@ -164,20 +220,79 @@ h2,h4 {
 }
 
 .shoutout h2{
-    font-family: "Hind", "GT-Haptik-Light", sans-serif;
+    font-family: "GT-Haptik-Light", "Hind", sans-serif;
     font-weight: 400;
-    font-size: 60px;
+    font-size: /*60px*/3.25rem;
     margin-bottom: 5px;
 }
 
 .shoutout h4{
     font-family: "Hind", "GT-Haptik-Light", sans-serif;
     font-weight: 300;
-    font-size: 38px;
+    font-size: /*38px*/2.5rem;
     margin-bottom: 5px;
 }
 
 .howdy-main .container {
     width: 100%;
     position: relative;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .shoutout h2{
+        font-size: /*60px*/2.25rem;
+        margin-bottom: 5px;
+    }
+    .shoutout h4{
+        font-size: /*38px*/1.5rem;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .howdy-main .welcome-intro .bubble {
+        border-radius: 30px 30px 30px 0;
+        padding: 15px;
+        margin-left: 30px;
+        width: 85%;
+        line-height: 1.2;
+
+    }
+
+    .welcome-intro .tweet.lego-avatar {
+        background-size: 40px 40px;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        left: -15px;
+        top: 92%;
+        /*bottom: 25px;*/
+    }
+
+    #dots .tweet.lego-avatar {
+            background-size: 40px, 40px, /*50%;*/
+            border-radius: 50%;
+            height: 40px;
+            width: 40px; */
+            left: -15px;
+            top: 80%;
+            /*bottom: -10px;*/
+    }
+    .welcome-intro .tweet.confetti-avatar {
+        background-size: 40px 40px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        left: -15px;
+        top: 92%;
+    }
+
+    .welcome-intro .tweet.dude-avatar {
+        background-size: 40px 40px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        left: -15px;
+        top: 92%;
+    }
 }
