@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    <title>Howdy</title>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script src="//use.typekit.net/irh5jar.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  </head>
-  <body class="index">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>Howdy</title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="//use.typekit.net/irh5jar.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/shoutout.js"></script>
+</head>
+<body>
+  <div class="howdy-main">
+    <div class="howdy-logo">
+      <!-- This should be a SVG, using text as placeholder -->
+      <h1>howdy.</h1>
+    </div>
+
+    <div id="shoutout" class="welcome-intro container">
+      <div id="shoutout-lego" class="shoutout">
+        <div class="tweet lego-avatar"></div>
+        <div class="bubble" id="lego">
+          <div id="highlights1" class="highlights">
+            <h2>Talkabot was a hit!</h2>
+            <h4>The most comprehensive bot conference of the year just made its first big splash in Austin!  <a href="http://talkabot.ai">Don't miss next year.</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="shoutout-confetti" class="shoutout">
+        <div class="tweet confetti-avatar">
+        </div>
+        <div class="bubble" id="confetti">
+          <div id="highlights2" class="highlights">
+            <h2>Howdy is a friendly workplace bot</h2>
+            <h4>Read why we think the best way to run meetings in Slack is now <a href="http://blog.howdy.ai">better than ever</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="shoutout-dude" class="shoutout">
+        <div class="tweet dude-avatar">
+        </div>
+        <div class="bubble" id="dude">
+          <div id="highlights3" class="highlights">
+            <h2>From the desk of Ben Brown</h2>
+            <h4>In June 2015, I wrote "<a href="https://blog.howdy.ai/what-will-the-automated-workplace-look-like-495f9d1e87da#.ytuc6eb9g">What will the automated workplace look like?</a>".  Read about our vision!</a>"</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="index">
     <div class="wrapper">
       <section class="content description">
         <div class="container">
@@ -61,5 +104,5 @@
         </div>
       </section>
     </div>
-  </body>
-</html>
+  </div>
+</body>
