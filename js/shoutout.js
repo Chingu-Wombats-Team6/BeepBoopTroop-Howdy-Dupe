@@ -34,7 +34,7 @@ ORIGINAL SOMEWHAT WORKING */
 
 $(document).ready(function(){ 
 	$('#shoutout > div:gt(0)').hide();
-	$('#dots').show(0).delay(1800).hide(0);
+	$('#dots').show(0).delay(2200).hide(0);
 
 
     setInterval(function() {
@@ -50,13 +50,13 @@ $(document).ready(function(){
 
     $('#shoutout-lego').hide();
     $('#shoutout-lego')
-     .delay(1800)
+     .delay(2300)
      .queue( function(next){
 		 $(this).show();
 		 next();
      });
      $('.highlights1')
-      .delay(1800)
+      .delay(2300)
       .queue( function(next){
         $(this).hide();
         next();
