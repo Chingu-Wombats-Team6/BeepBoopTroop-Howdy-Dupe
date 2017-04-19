@@ -1,3 +1,4 @@
+/* START SONAM */
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +12,10 @@
 }
 
 .index {
+  src: url('../font/GT-Haptik-Trial-Light.otf') format('woff2');
+}
+
+body {
   background-image: url(../img/Multicolor-light.png);
   background-attachment: fixed;
   color: rgb(60,60,60);
@@ -83,7 +88,7 @@
   max-width: 50rem;
 }
 
-/*triangle animation*/
+/* triangle animation */
 
 .botkit-studio:hover {
   width: 87%;
@@ -103,7 +108,7 @@
 	border-bottom: 128px solid transparent;
 }
 
-/*button styling*/
+/* button styling */
 
 .button-container {
   float: right;
@@ -167,7 +172,8 @@
   border-color: rgb(103,21,240);
 }
 
-/* Lower Sections Shared */
+/* START ALISON */
+/* lower sections shared */
 
 .a-text {
   color: white;
@@ -178,7 +184,7 @@
     opacity: 0;
   }
 
-/* Blue Section */
+/* blue section */
 .blue-container {
   width: 100%;
   background-color: #3a54ed;
@@ -240,7 +246,7 @@
   transform: translate(6.5rem, -2rem);
 }
 
-/* Pink Section */
+/* pink section */
 .pink-container {
   width: 100%;
   background-color: #d8117d;
@@ -305,7 +311,7 @@
   transform: translate(6.5rem, -2rem);
 }
 
-/* Footer */
+/* footer */
 footer {
   color: white;
   background-color: #1432e0;
@@ -321,8 +327,9 @@ footer a {
 .right{
   float: right;
 }
+/* END ALISON */
 
-/*needs work for responsiveness*/
+/* needs work for responsiveness */
 .overview, .info {
   position: relative;
   z-index: 1;
@@ -358,7 +365,7 @@ footer a {
   transform: translate(20rem, 0rem);
 }
 
-/*responsiveness*/
+/* responsiveness */
 
 @media only screen and (max-width: 1600px) {
   .botkit-studio:hover {
@@ -418,3 +425,282 @@ footer a {
     padding-top: 0;
   }
 }
+
+/* END SONAM */
+
+/* START TIM */
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+}
+
+/* container - place inside each section or around the entire page depending on your layout */
+.container {
+    width: 960px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+
+/* for clearing any floats <br "clearfloat"> */
+.clearfloat {
+    clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+/* ====== Keyframes for Shoutout animation ====== */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes shoutout {
+    0% { opacity: 0; }
+    100% { opacity: 1 }
+}
+
+@keyframes ellipsis {
+  to {
+    width: .8em; } }
+@-webkit-keyframes ellipsis {
+  to {
+    width: .8em; } }
+
+
+h2,h4 {
+    color: #444;
+}
+/* Top Section of page */
+.shoutout {
+    display: none;
+}
+
+/*.howdy-main {
+
+    background-color: #fff;
+    background-attachment: fixed;
+    width: 100%;
+
+}*/
+
+.welcome-intro {
+    padding: 30px;
+}
+
+/* blue howdy. logo at top */
+.howdy-logo {
+    color:#1432e0;
+    text-align: center;
+    font-family: "Hind", "freight-sans-pro", sans-serif;
+    font-weight: 600;
+    font-size: /*170px*/10rem;
+    margin: 15px 0 20px 0;
+}
+
+/* Entire div with speach bubbles, avatars, text */
+.howdy-main .shoutout .tweet {
+    text-align: left;
+    /*min-width: 75px;*/
+}
+
+.howdy-main .shoutout .dots::after {
+    overflow: hidden;
+    font-size: 4rem;
+    display: inline-block;
+    vertical-align: bottom;
+    /*margin-left: 120px;*/
+    -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+    animation: ellipsis steps(4, end) 900ms infinite;
+    content: "\2026";
+    /* ascii code for the ellipsis character */
+    width: 0;
+}
+
+.howdy-main .shoutout .highlights {
+      -webkit-animation: fadeIn 0.2s 0s forwards;
+      animation: fadeIn 0.2s 0s forwards;
+}
+
+.welcome-intro .shoutout {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    animation: shoutout 1s;
+}
+
+.howdy-main .welcome-intro .bubble {
+    /* border: 4px solid #D8117D; */
+    /* box-shadow: 20px 20px 0px 0px rgba(158, 3, 158, 0.39); */
+    border-radius: 60px 60px 60px 0;
+    padding: 30px;
+    margin-left: 120px;
+    width: 85%;
+    line-height: 1.2;
+
+}
+
+.howdy-main .welcome-intro .bubble#lego {
+    border:4px solid #D8117D;
+    box-shadow: 20px 20px 0px 0px rgba(158, 3, 158, 0.39);
+}
+
+.howdy-main .welcome-intro .bubble#confetti {
+    border: 4px solid #abdbef;
+    box-shadow: 20px 20px 0px 0px rgba(3, 158, 158, 0.39);
+}
+
+.howdy-main .welcome-intro .bubble#dude {
+    border: 4px solid #abdbef;
+    box-shadow: 20px 20px 0px 0px rgba(3, 158, 158, 0.39);
+}
+
+.welcome-intro .tweet.lego-avatar {
+    background-image: url("../img/lego.png");
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 25px;
+    top: 75%;
+}
+
+.welcome-intro .tweet.confetti-avatar {
+    background-image: url("../img/confetti.png");
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 25px;
+    top: 75%;
+}
+
+.welcome-intro .tweet.dude-avatar {
+    background-image: url("../img/dude.jpg");
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 25px;
+    top: 75%;
+}
+
+.shoutout h2{
+    font-family: "GT-Haptik-Light", "Hind", sans-serif;
+    font-weight: 400;
+    font-size: /*60px*/3.25rem;
+    margin-bottom: 5px;
+}
+
+.shoutout h4{
+    font-family: "Hind", "GT-Haptik-Light", sans-serif;
+    font-weight: 300;
+    font-size: /*38px*/2.5rem;
+    margin-bottom: 5px;
+}
+
+.howdy-main .container {
+    width: 100%;
+    position: relative;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .shoutout h2{
+        font-size: /*60px*/2.25rem;
+        margin-bottom: 5px;
+    }
+    .shoutout h4{
+        font-size: /*38px*/1.5rem;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .howdy-main .welcome-intro .bubble {
+        border-radius: 30px 30px 30px 0;
+        padding: 15px;
+        margin-left: 30px;
+        width: 85%;
+        line-height: 1.2;
+
+    }
+
+    .welcome-intro .tweet.lego-avatar {
+        background-size: 40px 40px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        left: -15px;
+        top: 92%;
+        /*bottom: 25px;*/
+    }
+
+    #dots .tweet.lego-avatar {
+            background-size: 40px, 40px, /*50%;*/
+            border-radius: 50%;
+            height: 40px;
+            width: 40px; */
+            left: -15px;
+            top: 80%;
+            /*bottom: -10px;*/
+    }
+    .welcome-intro .tweet.confetti-avatar {
+        background-size: 40px 40px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        left: -15px;
+        top: 92%;
+    }
+
+    .welcome-intro .tweet.dude-avatar {
+        background-size: 40px 40px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        left: -15px;
+        top: 92%;
+    }
+}
+/* END TIM */
