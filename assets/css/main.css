@@ -302,7 +302,7 @@ body {
 
 .learn-more {
   border-color: #700841;
-  
+
 }
 
 .learn-more::after {
@@ -565,14 +565,11 @@ h2,h4 {
 }
 
 .howdy-main .welcome-intro .bubble {
-    /* border: 4px solid #D8117D; */
-    /* box-shadow: 20px 20px 0px 0px rgba(158, 3, 158, 0.39); */
-    border-radius: 60px 60px 60px 0;
-    padding: 30px;
-    margin-left: 120px;
-    width: 85%;
-    line-height: 1.2;
-
+  border-radius: 60px 60px 60px 0;
+  padding: 30px;
+  margin-left: 120px;
+  width: 85%;
+  line-height: 1.2;
 }
 
 .howdy-main .welcome-intro .bubble#lego {
