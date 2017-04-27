@@ -1,0 +1,708 @@
+/* START SONAM */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'GTHaptikLight';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../font/GT-Haptik-Trial-Light.otf') format('woff2')
+}
+
+.index {
+  src: url('../font/GT-Haptik-Trial-Light.otf') format('woff2');
+}
+
+body {
+  background-image: url(../img/Multicolor-light.png);
+  background-attachment: fixed;
+  color: rgb(60,60,60);
+}
+
+.index p {
+  /* style | variant | weight | size/line-height | family */
+  font: normal 400 20px/32px "freight-sans-pro";
+}
+
+.description {
+  background-color: rgba(157,244,233, 0.7);
+  min-height: 26.5rem;
+}
+
+.botkit-studio {
+  background-color: rgb(176,134,250);
+  min-height: 16rem;
+}
+
+.botkit-studio .emphasis {
+  font-weight: bold;
+  color: rgb(227,211,254);
+  background-color: rgb(60,60,60);
+  padding: 0 0.75rem;
+  border-radius: 1rem;
+}
+
+.headers {
+  font-family: 'GTHaptikLight', sans-serif;
+}
+
+.headers h1 {
+  font-size: 51px;
+  line-height: 82px;
+}
+
+.headers h3 {
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.content {
+  width: 100%;
+}
+
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overview>img {
+  float: left;
+  margin: 1rem 3rem 0 0;
+  max-height: 16rem;
+}
+
+.overview>p:first-of-type {
+  padding-top: 1rem;
+}
+
+.info>p:first-of-type {
+  padding-top: 0.75rem;
+}
+
+.info>p {
+  float: left;
+  margin: 0;
+  max-width: 50rem;
+}
+
+/* triangle animation */
+
+.botkit-studio:hover {
+  width: 87%;
+  transition: all 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  position: relative;
+}
+
+.botkit-studio:hover::after {
+  left: 100%;
+  top: 0%;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+	border-top: 128px solid transparent;
+	border-left: 128px solid rgb(176,134,250);
+	border-bottom: 128px solid transparent;
+}
+
+/* button styling */
+
+.button-container {
+  float: right;
+}
+
+.button-container p {
+  letter-spacing: 0.1rem;
+}
+
+.buttons {
+  border-radius: 1rem 1rem 1rem 0;
+  max-height: 4rem;
+  max-width: 16rem;
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  border-width: 0.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.buttons:first-of-type {
+  margin-right: 1rem;
+}
+
+.login, .slack, .signup {
+  position: relative;
+  z-index: 1;
+}
+
+.login, .slack {
+  margin-top: 1rem;
+}
+
+.login p, .slack p {
+  font-size: 26px;
+}
+
+.signup p {
+  font-size: 22px;
+  line-height: 36px;
+  color: rgb(103,21,240);
+}
+
+.login p {
+  color: rgb(19,27,128);
+}
+
+.slack p {
+  color: rgb(123,0,63);
+}
+
+.login {
+  border-color: rgb(26,34,230);
+}
+
+.slack {
+  border-color: rgb(236,0,115);
+}
+
+.signup {
+  border-color: rgb(103,21,240);
+}
+
+/* START ALISON */
+/* lower sections shared */
+
+.a-text {
+  color: white;
+  text-decoration: none;
+}
+
+.gear, .shaky-face {
+    opacity: 0;
+  }
+
+/* blue section */
+.blue-container {
+  width: 100%;
+  background-color: #3a54ed;
+}
+
+.blue {
+  min-height: 16rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blue-container:hover {
+  width: 87%;
+  transition: all 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  position: relative;
+}
+
+.blue-container:hover::after {
+  left: 100%;
+  top: 0%;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-top: 128px solid transparent;
+  border-left: 128px solid #3a54ed;
+  border-bottom: 128px solid transparent;
+}
+
+.gear {
+  width: 35px;
+  height: 35px;
+  transform: rotate(1deg);
+  animation: spin 5s linear infinite .5s;
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.gear, .shaky-face {
+    opacity: 0;
+  }
+
+.blue:hover .gear{
+    opacity: 1;
+  }
+
+.get-started {
+  border-color: #0e24a8;
+  background-color: ;
+}
+
+.get-started::after {
+  background-color: #edf8bd;
+  padding: 1.75rem 8rem;
+  transform: translate(6.5rem, -2rem);
+}
+
+/* pink section */
+.pink-container {
+  width: 100%;
+  background-color: #d8117d;
+}
+
+.pink {
+  min-height: 16rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pink-container:hover {
+  width: 87%;
+  transition: all 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  position: relative;
+}
+
+.pink-container:hover::after {
+  left: 100%;
+  top: 0%;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-top: 128px solid transparent;
+  border-left: 128px solid #d8117d;
+  border-bottom: 128px solid transparent;
+}
+
+.shaky-face {
+  width: 35px;
+  height: 35px;
+  transform: rotate(1deg);
+  animation: shake .75s 0s none infinite;
+}
+
+@keyframes shake {
+    10% {transform: translate3d(-1px, 2px, 0);}
+    20% {transform: translate3d(2px, 1px, 0);}
+    30% {transform: translate3d(-1px, 2px, 0);}
+    40% {transform: translate3d(4px, -1, 0);}
+    50% {transform: translate3d(-2px, 2px, 0);}
+    60% {transform: translate3d(3px, 0, 0);}
+    70% {transform: translate3d(-2px, 2px, 0);}
+    80% {transform: translate3d(2px, -1, 0);}
+    90% {transform: translate3d(-1px, 0, 0);}
+}
+
+.pink:hover .shaky-face {
+    opacity: 1;
+  }
+
+.learn-more {
+  border-color: #700841;
+
+}
+
+.learn-more::after {
+  padding: 1.75rem 8rem;
+  background-color: #83f4dc;
+  transform: translate(6.5rem, -2rem);
+}
+
+/* footer */
+footer {
+  color: white;
+  background-color: #1432e0;
+  font-size: .8rem;
+  padding: 2em;
+  max-height: 49px;
+}
+
+footer a {
+  color: white;
+}
+
+.right{
+  float: right;
+}
+/* END ALISON */
+
+/* needs work for responsiveness */
+.overview, .info {
+  position: relative;
+  z-index: 1;
+}
+
+.login::after, .overview::after, .info::after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  border-radius: 1rem 1rem 1rem 0;
+  transition: transform 1s;
+}
+
+.login::after {
+  padding: 1.75rem 8rem;
+  background-color: rgba(255,120,193,0.8);
+  transform: translate(6.5rem, -2rem);
+}
+
+.overview::after {
+  padding: 1.75rem 4.3rem;
+  background-color: rgba(138,153,252,0.8);
+  transform: translate(29.75rem, 1.75rem);
+}
+
+.info::after {
+  padding: 1.75rem 4.5rem;
+  background-color: rgba(255,255,255,0.8);
+  transform: translate(20.75rem, 1rem);
+}
+
+.botkit-studio:hover .info::after {
+  transform: translate(20rem, 0rem);
+}
+
+/* responsiveness */
+
+@media only screen and (max-width: 1600px) {
+  .botkit-studio:hover {
+    transition: none;
+    width: 100%
+  }
+  .botkit-studio:hover::after {
+    display: none;
+  }
+
+  .gear, .shaky-face {
+    opacity: 1;
+  }
+  .pink-container:hover, .blue-container:hover {
+    transition: none;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1178px) {
+  .description {
+    min-height: 32rem;
+  }
+}
+
+@media only screen and (max-width: 1076px) {
+  .botkit-studio {
+    min-height: 17rem;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .description {
+    min-height: 49rem;
+  }
+  .botkit-studio {
+    min-height: 21rem;
+  }
+  .overview>img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .headers h1 {
+    text-align: center;
+  }
+  .button-container {
+    float: none;
+  }
+  .button-container button {
+    margin: 0 auto;
+  }
+  .botkit-studio {
+    padding-top: 0;
+  }
+}
+
+/* END SONAM */
+
+/* START TIM */
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+}
+
+/* container - place inside each section or around the entire page depending on your layout */
+.container {
+    width: 960px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+
+/* for clearing any floats <br "clearfloat"> */
+.clearfloat {
+    clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+/* ====== Keyframes for Shoutout animation ====== */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes shoutout {
+    0% { opacity: 0; }
+    100% { opacity: 1 }
+}
+
+@keyframes ellipsis {
+  to {
+    width: .8em; } }
+@-webkit-keyframes ellipsis {
+  to {
+    width: .8em; } }
+
+
+h2,h4 {
+    color: #444;
+}
+/* Top Section of page */
+.shoutout {
+    display: none;
+}
+
+/*.howdy-main {
+
+    background-color: #fff;
+    background-attachment: fixed;
+    width: 100%;
+
+}*/
+
+.welcome-intro {
+    padding: 30px;
+}
+
+/* blue howdy. logo at top */
+.howdy-logo {
+    color:#1432e0;
+    text-align: center;
+    font-family: "Hind", "freight-sans-pro", sans-serif;
+    font-weight: 600;
+    font-size: /*170px*/10rem;
+    margin: 15px 0 20px 0;
+}
+
+/* Entire div with speach bubbles, avatars, text */
+.howdy-main .shoutout .tweet {
+    text-align: left;
+    /*min-width: 75px;*/
+}
+
+.howdy-main .shoutout .dots::after {
+    overflow: hidden;
+    font-size: 4rem;
+    display: inline-block;
+    vertical-align: bottom;
+    /*margin-left: 120px;*/
+    -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+    animation: ellipsis steps(4, end) 900ms infinite;
+    content: "\2026";
+    /* ascii code for the ellipsis character */
+    width: 0;
+}
+
+.howdy-main .shoutout .highlights {
+      -webkit-animation: fadeIn 0.2s 0s forwards;
+      animation: fadeIn 0.2s 0s forwards;
+}
+
+.welcome-intro .shoutout {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    animation: shoutout 1s;
+}
+
+.howdy-main .welcome-intro .bubble {
+  border-radius: 60px 60px 60px 0;
+  padding: 30px;
+  margin-left: 120px;
+  width: 85%;
+  line-height: 1.2;
+}
+
+.howdy-main .welcome-intro .bubble#intro {
+    border:4px solid #D8117D;
+    box-shadow: 20px 20px 0px 0px rgba(158, 3, 158, 0.39);
+}
+
+.howdy-main .welcome-intro .bubble#lego {
+    border:4px solid #D8117D;
+    box-shadow: 20px 20px 0px 0px rgba(158, 3, 158, 0.39);
+}
+
+.howdy-main .welcome-intro .bubble#confetti {
+    border: 4px solid #abdbef;
+    box-shadow: 20px 20px 0px 0px rgba(3, 158, 158, 0.39);
+}
+
+.howdy-main .welcome-intro .bubble#dude {
+    border: 4px solid #abdbef;
+    box-shadow: 20px 20px 0px 0px rgba(3, 158, 158, 0.39);
+}
+
+.welcome-intro .tweet.lego-avatar {
+    background-image: url("../img/lego.png");
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 25px;
+    top: 75%;
+}
+
+.welcome-intro .tweet.confetti-avatar {
+    background-image: url("../img/confetti.png");
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 25px;
+    top: 75%;
+}
+
+.welcome-intro .tweet.dude-avatar {
+    background-image: url("../img/dude.jpg");
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 25px;
+    top: 75%;
+}
+
+.shoutout h2{
+    font-family: "GT-Haptik-Light", "Hind", sans-serif;
+    font-weight: 400;
+    font-size: /*60px*/3.25rem;
+    margin-bottom: 5px;
+}
+
+.shoutout h4{
+    font-family: "Hind", "GT-Haptik-Light", sans-serif;
+    font-weight: 300;
+    font-size: /*38px*/2.5rem;
+    margin-bottom: 5px;
+}
+
+.howdy-main .container {
+    width: 100%;
+    position: relative;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .shoutout h2{
+        font-size: /*60px*/2.25rem;
+        margin-bottom: 5px;
+    }
+    .shoutout h4{
+        font-size: /*38px*/1.5rem;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .howdy-main .welcome-intro .bubble {
+        border-radius: 30px 30px 30px 0;
+        padding: 15px;
+        margin-left: 30px;
+        width: 85%;
+        line-height: 1.2;
+
+    }
+
+    .welcome-intro .tweet.lego-avatar {
+        background-size: 40px 40px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        left: -15px;
+        top: 92%;
+        /*bottom: 25px;*/
+    }
+
+    #dots .tweet.lego-avatar {
+            background-size: 40px, 40px, /*50%;*/
+            border-radius: 50%;
+            height: 40px;
+            width: 40px; */
+            left: -15px;
+            top: 80%;
+            /*bottom: -10px;*/
+    }
+    .welcome-intro .tweet.confetti-avatar {
+        background-size: 40px 40px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        left: -15px;
+        top: 92%;
+    }
+
+    .welcome-intro .tweet.dude-avatar {
+        background-size: 40px 40px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        left: -15px;
+        top: 92%;
+    }
+}
+/* END TIM */
