@@ -172,8 +172,106 @@ body {
   border-color: rgb(103,21,240);
 }
 
+/* needs work for responsiveness */
+.overview, .info {
+  position: relative;
+  z-index: 1;
+}
+
+.login::after, .overview::after, .info::after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  border-radius: 1rem 1rem 1rem 0;
+  transition: transform 1s;
+}
+
+.login::after {
+  padding: 1.75rem 8rem;
+  background-color: rgba(255,120,193,0.8);
+  transform: translate(6.5rem, -2rem);
+}
+
+.overview::after {
+  padding: 1.75rem 4.3rem;
+  background-color: rgba(138,153,252,0.8);
+  transform: translate(29.75rem, 1.75rem);
+}
+
+.info::after {
+  padding: 1.75rem 4.5rem;
+  background-color: rgba(255,255,255,0.8);
+  transform: translate(20.75rem, 1rem);
+}
+
+.botkit-studio:hover .info::after {
+  transform: translate(20rem, 0rem);
+}
+
+/* responsiveness */
+
+@media only screen and (max-width: 1600px) {
+  .botkit-studio:hover {
+    transition: none;
+    width: 100%
+  }
+  .botkit-studio:hover::after {
+    display: none;
+  }
+  .gear, .shaky-face {
+    opacity: 1;
+  }
+  .pink-container:hover, .blue-container:hover {
+    transition: none;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1178px) {
+  .description {
+    min-height: 32rem;
+  }
+}
+
+@media only screen and (max-width: 1076px) {
+  .botkit-studio {
+    min-height: 17rem;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .description {
+    min-height: 49rem;
+  }
+  .botkit-studio {
+    min-height: 21rem;
+  }
+  .overview>img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .headers h1 {
+    text-align: center;
+  }
+  .button-container {
+    float: none;
+  }
+  .button-container button {
+    margin: 0 auto;
+  }
+  .botkit-studio {
+    padding-top: 0;
+  }
+}
+/* END SONAM */
+
+
 /* START ALISON */
-/* lower sections shared */
+/* section styling shared w/ sonam */
 
 .a-text {
   color: white;
@@ -181,8 +279,8 @@ body {
 }
 
 .gear, .shaky-face {
-    opacity: 0;
-  }
+  opacity: 0;
+}
 
 /* blue section */
 .blue-container {
@@ -223,8 +321,12 @@ body {
 }
 
 @keyframes spin {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
 }
 
 .gear, .shaky-face {
@@ -324,109 +426,10 @@ footer a {
   color: white;
 }
 
-.right{
+.right {
   float: right;
 }
 /* END ALISON */
-
-/* needs work for responsiveness */
-.overview, .info {
-  position: relative;
-  z-index: 1;
-}
-
-.login::after, .overview::after, .info::after {
-  content: " ";
-  position: absolute;
-  z-index: -1;
-  border-radius: 1rem 1rem 1rem 0;
-  transition: transform 1s;
-}
-
-.login::after {
-  padding: 1.75rem 8rem;
-  background-color: rgba(255,120,193,0.8);
-  transform: translate(6.5rem, -2rem);
-}
-
-.overview::after {
-  padding: 1.75rem 4.3rem;
-  background-color: rgba(138,153,252,0.8);
-  transform: translate(29.75rem, 1.75rem);
-}
-
-.info::after {
-  padding: 1.75rem 4.5rem;
-  background-color: rgba(255,255,255,0.8);
-  transform: translate(20.75rem, 1rem);
-}
-
-.botkit-studio:hover .info::after {
-  transform: translate(20rem, 0rem);
-}
-
-/* responsiveness */
-
-@media only screen and (max-width: 1600px) {
-  .botkit-studio:hover {
-    transition: none;
-    width: 100%
-  }
-  .botkit-studio:hover::after {
-    display: none;
-  }
-
-  .gear, .shaky-face {
-    opacity: 1;
-  }
-  .pink-container:hover, .blue-container:hover {
-    transition: none;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 1178px) {
-  .description {
-    min-height: 32rem;
-  }
-}
-
-@media only screen and (max-width: 1076px) {
-  .botkit-studio {
-    min-height: 17rem;
-  }
-}
-
-@media only screen and (max-width: 1020px) {
-  .description {
-    min-height: 49rem;
-  }
-  .botkit-studio {
-    min-height: 21rem;
-  }
-  .overview>img {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .headers h1 {
-    text-align: center;
-  }
-  .button-container {
-    float: none;
-  }
-  .button-container button {
-    margin: 0 auto;
-  }
-  .botkit-studio {
-    padding-top: 0;
-  }
-}
-
-/* END SONAM */
 
 /* START TIM */
 body { line-height: 1; }
@@ -438,22 +441,20 @@ ins { text-decoration: none; }
 del { text-decoration: line-through; }
 table { border-collapse: collapse; border-spacing: 0; }
 
-}
-
 /* container - place inside each section or around the entire page depending on your layout */
 .container {
-    width: 960px;
-    margin: 0 auto;
-    text-align: left;
-    position: relative;
+  width: 960px;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
 }
 
 /* for clearing any floats <br "clearfloat"> */
 .clearfloat {
-    clear:both;
-    height:0;
-    font-size: 1px;
-    line-height: 0px;
+  clear:both;
+  height:0;
+  font-size: 1px;
+  line-height: 0px;
 }
 
 /* ====== Keyframes for Shoutout animation ====== */
@@ -462,106 +463,124 @@ table { border-collapse: collapse; border-spacing: 0; }
     opacity: 0;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
-    transform: translateZ(0); }
+    transform: translateZ(0);
+  }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 @-moz-keyframes fadeIn {
   0% {
     opacity: 0;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
-    transform: translateZ(0); }
+    transform: translateZ(0);
+  }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 @-o-keyframes fadeIn {
   0% {
     opacity: 0;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
-    transform: translateZ(0); }
+    transform: translateZ(0);
+  }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
-    transform: translateZ(0); }
+    transform: translateZ(0);
+  }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 
 @-webkit-keyframes shoutout {
-    0% { opacity: 0; }
-    100% { opacity: 1 }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1
+  }
 }
 
 @keyframes ellipsis {
   to {
-    width: .8em; } }
+    width: .8em;
+  }
+}
+
 @-webkit-keyframes ellipsis {
   to {
-    width: .8em; } }
+    width: .8em;
+  }
+}
 
 
 h2,h4 {
-    color: #444;
+  color: #444;
 }
 /* Top Section of page */
 .shoutout {
-    display: none;
+  display: none;
+  margin-bottom: 2rem;
 }
 
-/*.howdy-main {
-
-    background-color: #fff;
-    background-attachment: fixed;
-    width: 100%;
-
-}*/
+.bubble {
+  background-color: #fff;
+  font-family: 'GTHaptikLight', sans-serif;
+}
 
 .welcome-intro {
-    padding: 30px;
+  padding: 30px;
 }
 
 /* blue howdy. logo at top */
 .howdy-logo {
-    color:#1432e0;
-    text-align: center;
-    font-family: "Hind", "freight-sans-pro", sans-serif;
-    font-weight: 600;
-    font-size: /*170px*/10rem;
-    margin: 15px 0 20px 0;
+  color:#1432e0;
+  text-align: center;
+  font-family: "Hind", "freight-sans-pro", sans-serif;
+  font-weight: 600;
+  font-size: /*170px*/10rem;
+  margin: 15px 0 20px 0;
 }
 
 /* Entire div with speach bubbles, avatars, text */
 .howdy-main .shoutout .tweet {
-    text-align: left;
-    /*min-width: 75px;*/
+  text-align: left;
 }
 
 .howdy-main .shoutout .dots::after {
-    overflow: hidden;
-    font-size: 4rem;
-    display: inline-block;
-    vertical-align: bottom;
-    /*margin-left: 120px;*/
-    -webkit-animation: ellipsis steps(4, end) 900ms infinite;
-    animation: ellipsis steps(4, end) 900ms infinite;
-    content: "\2026";
-    /* ascii code for the ellipsis character */
-    width: 0;
+  overflow: hidden;
+  font-size: 4rem;
+  display: inline-block;
+  vertical-align: bottom;
+  /*margin-left: 120px;*/
+  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  /* ascii code for the ellipsis character */
+  content: "\2026";
+  width: 0;
 }
 
 .howdy-main .shoutout .highlights {
-      -webkit-animation: fadeIn 0.2s 0s forwards;
-      animation: fadeIn 0.2s 0s forwards;
+  -webkit-animation: fadeIn 0.2s 0s forwards;
+  animation: fadeIn 0.2s 0s forwards;
 }
 
 .welcome-intro .shoutout {
-    position: relative;
-    display: inline-block;
-    width: 90%;
-    animation: shoutout 1s;
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  animation: shoutout 1s;
 }
 
 .howdy-main .welcome-intro .bubble {
@@ -572,132 +591,119 @@ h2,h4 {
   line-height: 1.2;
 }
 
-.howdy-main .welcome-intro .bubble#lego {
-    border:4px solid #D8117D;
-    box-shadow: 20px 20px 0px 0px rgba(158, 3, 158, 0.39);
+.bubble#lego, .bubble#intro {
+  border:4px solid #D8117D;
+  box-shadow: 20px 20px 0px 0px rgba(158, 3, 158, 0.39);
 }
 
-.howdy-main .welcome-intro .bubble#confetti {
-    border: 4px solid #abdbef;
-    box-shadow: 20px 20px 0px 0px rgba(3, 158, 158, 0.39);
-}
-
-.howdy-main .welcome-intro .bubble#dude {
-    border: 4px solid #abdbef;
-    box-shadow: 20px 20px 0px 0px rgba(3, 158, 158, 0.39);
+.bubble#confetti, .bubble#dude {
+  border: 4px solid #abdbef;
+  box-shadow: 20px 20px 0px 0px rgba(3, 158, 158, 0.39);
 }
 
 .welcome-intro .tweet.lego-avatar {
-    background-image: url("../img/lego.png");
-    background-size: 80px 80px;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    left: 25px;
-    top: 75%;
+  background-image: url("../img/lego.png");
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  left: 25px;
+  top: 75%;
 }
 
 .welcome-intro .tweet.confetti-avatar {
-    background-image: url("../img/confetti.png");
-    background-size: 80px 80px;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    left: 25px;
-    top: 75%;
+  background-image: url("../img/confetti.png");
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  left: 25px;
+  top: 75%;
 }
 
 .welcome-intro .tweet.dude-avatar {
-    background-image: url("../img/dude.jpg");
-    background-size: 80px 80px;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    left: 25px;
-    top: 75%;
+  background-image: url("../img/dude.jpg");
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  left: 25px;
+  top: 75%;
 }
 
 .shoutout h2{
-    font-family: "GT-Haptik-Light", "Hind", sans-serif;
-    font-weight: 400;
-    font-size: /*60px*/3.25rem;
-    margin-bottom: 5px;
+  font-weight: 400;
+  font-size: /*60px*/3.25rem;
+  margin-bottom: 5px;
 }
 
 .shoutout h4{
-    font-family: "Hind", "GT-Haptik-Light", sans-serif;
-    font-weight: 300;
-    font-size: /*38px*/2.5rem;
-    margin-bottom: 5px;
+  font-weight: 300;
+  font-size: /*38px*/2.5rem;
+  margin-bottom: 5px;
 }
 
 .howdy-main .container {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
 }
 
 @media screen and (max-width: 1023px) and (min-width: 768px) {
-    .shoutout h2{
-        font-size: /*60px*/2.25rem;
-        margin-bottom: 5px;
-    }
-    .shoutout h4{
-        font-size: /*38px*/1.5rem;
-        margin-bottom: 5px;
-    }
+  .shoutout h2 {
+      font-size: /*60px*/2.25rem;
+      margin-bottom: 5px;
+  }
+  .shoutout h4 {
+      font-size: /*38px*/1.5rem;
+      margin-bottom: 5px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .howdy-main .welcome-intro .bubble {
-        border-radius: 30px 30px 30px 0;
-        padding: 15px;
-        margin-left: 30px;
-        width: 85%;
-        line-height: 1.2;
-
-    }
-
-    .welcome-intro .tweet.lego-avatar {
-        background-size: 40px 40px;
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        left: -15px;
-        top: 92%;
-        /*bottom: 25px;*/
-    }
-
-    #dots .tweet.lego-avatar {
-            background-size: 40px, 40px, /*50%;*/
-            border-radius: 50%;
-            height: 40px;
-            width: 40px; */
-            left: -15px;
-            top: 80%;
-            /*bottom: -10px;*/
-    }
-    .welcome-intro .tweet.confetti-avatar {
-        background-size: 40px 40px;
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        left: -15px;
-        top: 92%;
-    }
-
-    .welcome-intro .tweet.dude-avatar {
-        background-size: 40px 40px;
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        left: -15px;
-        top: 92%;
-    }
+  .howdy-main .welcome-intro .bubble {
+    border-radius: 30px 30px 30px 0;
+    padding: 15px;
+    margin-left: 30px;
+    width: 85%;
+    line-height: 1.2;
+  }
+  .welcome-intro .tweet.lego-avatar {
+    background-size: 40px 40px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    left: -15px;
+    top: 92%;
+  }
+  #dots .tweet.lego-avatar {
+    background-size: 40px, 40px, /*50%;*/
+    border-radius: 50%;
+    height: 40px;
+    width: 40px; */
+    left: -15px;
+    top: 80%;
+  }
+  .welcome-intro .tweet.confetti-avatar {
+    background-size: 40px 40px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    left: -15px;
+    top: 92%;
+  }
+  .welcome-intro .tweet.dude-avatar {
+    background-size: 40px 40px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    left: -15px;
+    top: 92%;
+  }
 }
 /* END TIM */
